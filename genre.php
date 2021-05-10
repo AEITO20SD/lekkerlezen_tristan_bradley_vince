@@ -63,8 +63,8 @@
       $stmt = $conn->prepare("SELECT id, Naam, auteur, descriptie, genre, kaft FROM boek WHERE genre = :genre");
       $stmt->setFetchMode(PDO::FETCH_ASSOC);
       $stmt->execute(array('genre' => $genre));
-      $id = $_GET["id"];
       $result = $stmt->fetchAll();
+    
       ?>
       <div class="center">
         <h2><?php echo $genre ?></h2>
@@ -78,7 +78,8 @@
 
           </div>
           <div class="boekenbox">
-            <p><?php echo $boek["descriptie"] ?></p>
+            <p><?php $id = $boek["id"];
+            echo $boek["descriptie"] ?></p>
             <p><?php echo "<a href='reviews.php?id=$id'>Link to reviews</a>"; ?></p>
           </div>
         </div>

@@ -12,11 +12,11 @@
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       $stmt = $conn->prepare("SELECT id, Naam, auteur, descriptie, genre, kaft FROM boek WHERE id = :id");
       $stmt->setFetchMode(PDO::FETCH_ASSOC);
-      $stmt->execute(array('genre' => $genre));
+      $stmt->execute(array('id' => $id));
       $result = $stmt->fetchAll();
       ?>
       <div class="center">
-        <h2><?php echo $genre ?></h2>
+        <h2><?php echo $id ?></h2>
       </div>
       <?php
       foreach ($result as $boek) { ?>
