@@ -26,8 +26,8 @@
     
     
     <footer>
-    <div class="contactenbox">
-    <?= footer(); ?>
+    <div class="contactbox">
+    <?= contactbox(); ?>
     </div>
     </footer>
 </body>

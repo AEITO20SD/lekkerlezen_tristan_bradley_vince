@@ -23,13 +23,13 @@ function welkom(){
 
 
 
-function footer(){
-    $footer = "<h3>Contact:</h3>";
-    $footer .= "<p> Tel: 06060606</p><br>";
-    $footer .= "<p> E-mail: Lekkerlezen@lezen.nl</p><br>";
-    $footer .= "<p> Adres: Lezenstraat 7</p><br>";
+function contactbox(){
+    $footerbox = "<h3>Contact:</h3>";
+    $footerbox .= "<p> Tel: 06060606</p>";
+    $footerbox .= "<p> E-mail: Lekkerlezen@lezen.nl</p>";
+    $footerbox .= "<p> Adres: Lezenstraat 7</p>";
 
-    return $footer;
+    return $footerbox;
 }
 
 

@@ -149,6 +149,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: left;
     height: 120px;
     width: 100%;
     width: 100%;
