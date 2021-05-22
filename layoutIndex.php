@@ -3,15 +3,31 @@
 
 <head>
     <title>Lekker Lezen</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-widht, initial-scale=1">
+    <meta name="description" content="Lekker Lezen site">
+    <title>Lekker Lezen</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 
 <body>
-<div class="header">
-<header><?= getHeader(); ?></header>
-</div>
+    <header>
+        <div class="header">
+            <header><?= getHeader(); ?></header>
+        </div>
 
+    </header>
+    <main>
+    <div class="welkom">
+    <?= welkom(); ?>
+    </div>
+    
+    
+    </main>
+    
+    
+    
+    <footer>
+    <div class="contactenbox">
+    <?= footer(); ?>
+    </div>
+    </footer>
 </body>

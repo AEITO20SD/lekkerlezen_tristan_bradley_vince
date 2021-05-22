@@ -16,5 +16,21 @@ function getHeader(){
     return $header;
 }
 
+function welkom(){
+    return "<h1>Welkom bij boekhandel Lekker Lezen.</h1>";
+}
+
+
+
+
+function footer(){
+    $footer = "<h3>Contact:</h3>";
+    $footer .= "<p> Tel: 06060606</p><br>";
+    $footer .= "<p> E-mail: Lekkerlezen@lezen.nl</p><br>";
+    $footer .= "<p> Adres: Lezenstraat 7</p><br>";
+
+    return $footer;
+}
+
 
 ?>
