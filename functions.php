@@ -20,7 +20,18 @@ function welkom(){
     return "<h1>Welkom bij boekhandel Lekker Lezen.</h1>";
 }
 
+function uitgelichtTekst(){
+    return "Uitgelichte boeken:";
+}
 
+function uitgelichtbox(){
+    $box = "<img class='img5' src='' alt='Uitgelicht Boek 1'>";
+    $box .= "<img class='img5' src='' alt='Uitgelicht Boek 2'>";
+    $box .= "<img class='img5' src='' alt='Uitgelicht Boek 3'>";
+    $box .= "<img class='img5' src='' alt='Uitgelicht Boek 4'>";
+
+    return $box;
+}
 
 
 function contactbox(){

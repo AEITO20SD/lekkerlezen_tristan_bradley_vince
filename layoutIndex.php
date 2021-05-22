@@ -20,7 +20,12 @@
     <?= welkom(); ?>
     </div>
     
-    
+    <div class="uitgelicht">
+    <?= uitgelichtTekst() ?>
+    <div class="uitgelicht_box1_images">
+    <?= uitgelichtbox() ?>
+    </div>
+    </div>
     </main>
     
     
