@@ -60,7 +60,7 @@
       $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
       // set the PDO error mode to exception
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      $stmt = $conn->prepare("SELECT id, Naam, auteur, descriptie, genre, kaft FROM boek WHERE genre = :genre");
+      $stmt = $conn->prepare("SELECT bookid, Naam, auteur, descriptie, genre, kaft FROM boek WHERE genre = :genre");
       $stmt->setFetchMode(PDO::FETCH_ASSOC);
       $stmt->execute(array('genre' => $genre));
       $result = $stmt->fetchAll();
@@ -78,9 +78,9 @@
 
           </div>
           <div class="boekenbox">
-            <p><?php $id = $boek["id"];
+            <p><?php $id = $boek["bookid"];
             echo $boek["descriptie"] ?></p>
-            <p><?php echo "<a href='reviews.php?id=$id'>Link to reviews</a>"; ?></p>
+            <p><?php echo "<a href='reviews.php?bookid=$id'>Link to reviews</a>"; ?></p>
           </div>
         </div>
         <?php
