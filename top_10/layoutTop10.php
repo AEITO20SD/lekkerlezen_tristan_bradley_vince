@@ -10,9 +10,12 @@
 
 <body>
 <header>
+<?php 
+$conn = dBConnect(); ?>
 <div class="header">
 
             <?= headerknoppen(); ?>
+
         </div>
 </header>
 

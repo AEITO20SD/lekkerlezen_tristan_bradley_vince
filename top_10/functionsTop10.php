@@ -1,20 +1,20 @@
 <?php
 function dBConnect() {
     
-    $servername = "localhost";
-    $username = "username";
-    $password = "password";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "lekkerlezen";
+
+$conn = new PDO("mysql: host=$servername;dbname=$dbname", $username, $password);
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$stmt = $conn->prepare("SELECT id, Naam, auteur, kaft FROM boek");
+$stmt->execute();
+
+// set the resulting array to associative
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-    try {
-      $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
-      // set the PDO error mode to exception
-      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      echo "Connected successfully";
-    } catch(PDOException $e) {
-      echo "Connection failed: " . $e->getMessage();
-    }
-    
-    
+return $conn;
 }
 
 
