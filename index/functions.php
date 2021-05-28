@@ -47,10 +47,7 @@ function uitgelichtbox(){
 
 function contactbox(){
     $footerbox = "<h3>Contact:</h3>";
-    $footerbox .= "<p> Tel: 06060606</p>";
-    $footerbox .= "<p> E-mail: Lekkerlezen@lezen.nl</p>";
-    $footerbox .= "<p> Adres: Lezenstraat 7</p>";
-
+    $footerbox .= "<p> Tel: 06060606 <br> E-mail: Lekkerlezen@lezen.nl <br> Adres: Lezenstraat 7 </p>";
     return $footerbox;
 }
 

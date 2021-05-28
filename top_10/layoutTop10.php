@@ -18,7 +18,17 @@ $conn = dBConnect(); ?>
 
         </div>
 </header>
+<div class="box">
+<p>hoi</p>
+</div>
 
+
+
+<footer>
+<div class="contactbox">
+<?= contactbox();?>
+</div>
+</footer>
 </body>
 
 
