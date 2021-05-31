@@ -26,7 +26,7 @@ function showBoeken(){
 
     $conn = new PDO("mysql: host=$servername;dbname=$dbname", $username, $password);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $stmt = $conn->prepare("SELECT id, Naam, auteur, kaft FROM boek");
+  $stmt = $conn->prepare("SELECT id, Naam, auteur, descriptie, kaft FROM boek");
   $stmt->execute();
   
   // set the resulting array to associative
