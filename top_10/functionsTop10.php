@@ -38,9 +38,10 @@ function showBoeken(){
     foreach ($result as $boek) { ?>
       <div class="container">
         <div class="boekenboxinbox">
-          <?php $x++;
+          <?php 
         
         while ($boek["top_10"] = 10 ) {
+            $x++;
             echo "$x: <br>";
         
           ?>
