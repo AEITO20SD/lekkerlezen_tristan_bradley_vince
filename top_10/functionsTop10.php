@@ -18,6 +18,27 @@ function dBConnect()
     return $conn;
 }
 
+function showBoeken(){
+    $x = 0;
+
+  foreach ($result as $boek) { ?>
+    <div class="container">
+      <div class="boekenboxinbox">
+        <?php $x++;
+        echo "$x: <br>";
+
+        ?>
+        <p><?php echo  $boek["Naam"] ?></p>
+        <?php echo '<img class="img3"src="data:image/jpeg;base64,' . base64_encode($boek['kaft']) . '"/>'; ?>
+
+      </div>
+      <div class="boekenbox">
+        <p><?php echo $boek["descriptie"] ?></p>
+
+      </div>
+    </div>
+ }
+}
 
 function headerKnoppen()
 {
@@ -31,18 +52,7 @@ function headerKnoppen()
     return $headerknop;
 }
 
-function uitgelichtTekst(){
-    return "<h1>Uitgelichte boeken:</h1>";
-}
 
-function uitgelichtbox(){
-    $box = "<img class='img5' src='' alt='Uitgelicht Boek 1'>";
-    $box .= "<img class='img5' src='' alt='Uitgelicht Boek 2'>";
-    $box .= "<img class='img5' src='' alt='Uitgelicht Boek 3'>";
-    $box .= "<img class='img5' src='' alt='Uitgelicht Boek 4'>";
-
-    return $box;
-}
 
 function contactbox(){
     $footerbox = "<h3>Contact:</h3>";
