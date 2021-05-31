@@ -22,6 +22,9 @@ $conn = dBConnect(); ?>
 <p>hoi</p>
 </div>
 
+<main>
+<?php showBoeken() ?>
+</main>
 
 
 <footer>

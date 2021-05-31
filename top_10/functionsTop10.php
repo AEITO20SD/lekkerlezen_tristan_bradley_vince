@@ -19,6 +19,11 @@ function dBConnect()
 }
 
 function showBoeken(){
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "lekkerlezen";
+    
     $conn = new PDO("mysql: host=$servername;dbname=$dbname", $username, $password);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $stmt = $conn->prepare("SELECT id, Naam, auteur, kaft FROM boek");
