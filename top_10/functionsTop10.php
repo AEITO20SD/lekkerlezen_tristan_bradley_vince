@@ -55,6 +55,8 @@ function showBoeken(){
         </div>
       </div>
       <?php
+
+      
       return $boek;
      }
     }
