@@ -25,7 +25,31 @@
             <?= uitgelichtTekst(); ?>
             <div class="uitgelicht_box1_images">
                 <?= uitgelichtbox(); ?>
+                
             </div>
+            <div class="uitgelicht_box1_text">
+        <div class="titel_en_auteur">
+         <?= titel(); ?>
+        </div>
+        <div class="titel_en_auteur">
+        <?= titel(); ?>
+        </div>
+        <div class="titel_en_auteur">
+        <?= titel(); ?>
+        </div>
+        <div class="titel_en_auteur">
+        <?= titel(); ?>
+        </div>
+        </div>
+        </div>
+        <div class="winkel">
+        <?= waar(); ?>
+        <div class="winkel_box1">
+        <?= plaatjeWinkel(); ?>
+        <div class="winkel_box1_text">
+        <?= winkelTekst(); ?>
+        </div>
+        </div>
         </div>
     </main>
 
