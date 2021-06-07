@@ -16,11 +16,11 @@ function dBconnect(){
   $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-} catch ( PDOexception $e ) {
+ catch ( PDOexception $e ) {
    echo $e->getmessage();
    echo "kon geen verbinding maken.";
 }
-}
+
 function getHeader(){
 return "dit is de header";
 }
@@ -49,9 +49,5 @@ function getSection(){
  }
  return $section;
 }
-function getFietsen(){
-}
 
-function showFietsen($fietsen){
-  }
 ?>
