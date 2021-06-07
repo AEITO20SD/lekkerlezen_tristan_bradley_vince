@@ -2,25 +2,19 @@
 
 function dBconnect(){
 
- if ( $_SERVER['SERVER_NAME'] == "localhost") {
-  DEFINE ( "USER", "root" );
-  DEFINE ( "PASSWORD", "" );
-  DEFINE ( "HOST", "localhost" );
-  DEFINE ( "DBNAME", "Fietsenwinkel" );
-}
-else {
-  DEFINE ( "USER", "s157751" );
-  DEFINE ( "PASSWORD", "lekkerlezen" );
-  DEFINE ( "HOST", "localhost" );
-  DEFINE ( "DBNAME", "s157751_Fietsenwinkel" );
-}
-try {
-  $connstring = "mysql:host=" . HOST . ";dbname=" . DBNAME;
-  $conn = new PDO ("$connstring", USER, PASSWORD);
-  $conn->setattribute ( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-//echo "verbinding gelukt. <br>";
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "lekkerlezen";
 
-return $conn;
+  $conn = new PDO("mysql: host=$servername;dbname=$dbname", $username, $password);
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $stmt = $conn->prepare("SELECT id, Naam, auteur, kaft FROM boek");
+  $stmt->execute();
+
+  // set the resulting array to associative
+  $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
 } catch ( PDOexception $e ) {
    echo $e->getmessage();
