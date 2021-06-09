@@ -49,10 +49,11 @@
     </div>
   </div>
   <?php
+  include_once("functionsgenre.php");
   dBConnect();
 
   $books = getBookByGenre();
-  showBookByGenre($books, $genre);
+  showBookByGenre($books);
   ?>
 </main>
   <footer>
