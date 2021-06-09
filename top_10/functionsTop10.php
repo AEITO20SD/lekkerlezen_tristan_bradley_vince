@@ -47,7 +47,8 @@ function headerKnoppen()
     $headerknop .= "<button class='navigation' onclick='document.location='top10.php''>Top 10</button>";
     $headerknop .=  "<button class='navigation' onclick='document.location='overons.html''>Over Ons</button>";
     $headerknop .= "<button class='navigation' onclick='document.location='contact.php''>Contact Pagina</button>";
-
+    $headerknop .= "<button class='navigation' onclick='document.location='inlog.html''>Inlog pagina</button>";
+    
     return $headerknop;
 }
 
