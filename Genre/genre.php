@@ -3,12 +3,12 @@
 <head>
   <meta name="description" content="Lekker Lezen site">
   <title>Lekker Lezen</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <header>
     <div class="header">
-      <img class="img1" src="Foto/logo.png" alt="Lekker lezen logo">
+      <img class="img1" src="../Foto/logo.png" alt="Lekker lezen logo">
       <button class="navigation" onclick="document.location='index/index.php'">Homepage</button>
       <button class="navigation" onclick="document.location='genre.php'">Genre</button>
       <button class="navigation" onclick="document.location='top10.php'">Top 10</button>
@@ -48,21 +48,22 @@
     <div class="genre"> <a href="genre.php?genre=Thriller"> Thriller </a>
     </div>
   </div>
+
+
+
   <?php
   include_once("functionsgenre.php");
-  dBConnect();
+  // dBConnect(); //
 
   $books = getBookByGenre();
   showBookByGenre($books);
   ?>
 </main>
+
   <footer>
-    <div class="contactbox">
-      <h3>Contact:</h3>
-      <p>Tel: 06060606<br>
-        E-mail: Lekkerlezen@lezen.nl<br>
-        Adres: Lezenstraat 7
-      </p>
+    <div class="stickyfooter">
+        <?= contactbox(); ?>
     </div>
+
   </footer>
 </body>
