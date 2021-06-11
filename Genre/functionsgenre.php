@@ -22,7 +22,6 @@ function getBookByGenre(){
       $stmt->setFetchMode(PDO::FETCH_ASSOC);
       $stmt->execute(array('genre' => $genre));
       $result = $stmt->fetchAll();
-
       return $result;
     }
     } catch (PDOException $e) {
@@ -32,12 +31,15 @@ function getBookByGenre(){
     $conn = null;
 }
 
-function showBookByGenre($genre, $books) {
-  ?>
+function showBookByGenre($books) {
+  if (isset($_GET["genre"])) {
+    ?>
       <div class="center">
-        <h2><?php echo $genre ?></h2>
+        <h2><?php echo $_GET["genre"] ?></h2>
       </div>
       <?php
+  }
+  if (isset($books)) {
       foreach ($books as $boek) { ?>
         <div class="container">
           <div class="boekenboxinbox">
@@ -53,6 +55,7 @@ function showBookByGenre($genre, $books) {
         </div>
         <?php
       }
+    }
 }
 
 
