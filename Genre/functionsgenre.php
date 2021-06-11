@@ -27,7 +27,7 @@ function getBookByGenre(){
     } catch (PDOException $e) {
       echo "Connection failed: " . $e->getMessage();
     }
-  
+
     $conn = null;
 }
 
@@ -58,6 +58,11 @@ function showBookByGenre($books) {
     }
 }
 
+function contactbox(){
+    $footerbox = "<h3>Contact:</h3>";
+    $footerbox .= "<p> Tel: 06060606 <br> E-mail: Lekkerlezen@lezen.nl <br> Adres: Lezenstraat 7 </p>";
+    return $footerbox;
+}
 
 
 ?>

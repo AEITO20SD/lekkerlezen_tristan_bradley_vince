@@ -80,7 +80,7 @@ body {
     border-width: 2px;
     border-color: #8c521f;
   }
-  
+
   .img6 {
     height: 250px;
     width: 250px;
@@ -91,7 +91,7 @@ body {
     border-width: 2px;
     border-color: #8c521f;
   }
-  
+
   .header {
     display: flex;
     flex-wrap: nowrap;
@@ -155,10 +155,24 @@ body {
     text-align: left;
     height: 120px;
     width: 100%;
-    width: 100%;
     background-color: #e8e4ba;
     border-color: #8c521f;
   }
+
+.stickyfooter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  height: 120px;
+  background-color: #e8e4ba;
+  border-color: #8c521f;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
   .contact {
     display: flex;
     flex-direction: column;
@@ -258,51 +272,55 @@ body {
     border-width: 2px;
     border-style: solid;
   }
-  
+
   .over0{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  
+
   .over{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 70%;
   }
-  
+
   .over2{
     font-size: 16px;
   display:flex;
   flex-direction: column;
   flex-wrap: wrap;
   }
-  
+
   .over3{
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 25%;
   }
-  
+
   .over4{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
   font-size: 19px;
   }
-  
+
+  .test {
+text-align: center;
+  }
+
   /* Voor login pagina  */
-  
-  
-  
-  
+
+
+
+
   .logincontainer{
     width:40%;
     margin:0 auto;
   }
-  
+
   #div_login{
     border: 1px solid gray;
     border-radius: 3px;
@@ -311,7 +329,7 @@ body {
     box-shadow: 0px 2px 2px 0px  gray;
     margin: 0 auto;
   }
-  
+
   #div_login h1{
     margin-top: 0px;
     font-weight: normal;
@@ -320,18 +338,18 @@ body {
     color: white;
     font-family: sans-serif;
   }
-  
+
   #div_login div{
     clear: both;
     margin-top: 10px;
     padding: 5px;
   }
-  
+
   #div_login .textbox{
     width: 96%;
     padding: 7px;
   }
-  
+
   #div_login input[type=submit]{
     padding: 7px;
     width: 100px;
@@ -339,4 +357,3 @@ body {
     border: 0px;
     color: white;
   }
-  
