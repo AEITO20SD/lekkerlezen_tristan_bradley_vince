@@ -10,8 +10,8 @@
         $conn = dBConnect(); ?>
         <div class="header">
 
-            <?php headerknoppen(); 
-            $section = register();?>
+            <?= headerknoppen(); ?>
+         <?php   $section = register();?>
 
         </div>
     </header>
@@ -25,8 +25,8 @@
 <input type="submit" name="register" value="register" />
 </form>
 <p>- - -</p>
-<p>Als u al een account heeft kunt u hier inloggen.</p>
-<a href="http://localhost/lekkerlezen_tristan_bradley_vince/inlog/layoutLogin.php">inloggen</a>
+<p>Als u al een account heeft kunt u hier 
+<a href="inlog.php">inloggen</a>
 </p>
 
 <footer>

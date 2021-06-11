@@ -55,13 +55,12 @@ function login()
 
         if (checkUserPassword($username, $password)) {
             echo "U bent ingelogd.";
-            header('Refresh:2; url=index.php');
         } else {
             echo "Er is iets fout gegaan tijdens het inloggen";
-            //header('Refresh:2; url=index.php?page=inloggen');
+            
         }
     } else {
-        include("login.html");
+        
     }
 }
 
@@ -97,13 +96,7 @@ function checkUserPassword($username, $password)
             foreach ($users as $user) {
                 //print_r($user);
                 $passwordHash = $user['password'];
-                echo $password;
-                echo "<br>";
-                echo $passwordHash;
-                echo "<br>";
                 $passwordHash1 = password_hash($password, PASSWORD_DEFAULT);
-                echo $passwordHash1;
-                echo "<br>";
                 if (password_verify($password, $passwordHash)) {
                     $_SESSION['login'] = true;
                     $_SESSION['username'] = $user['username'];
@@ -134,7 +127,6 @@ function register()
 
         if (checkUser($username)) {
             echo "gebruiker bestaat al";
-            header('Refresh:5; url=index.php?page=registreren');
         } else {
             $conn = dBConnect();
             $stmt = $conn->prepare("INSERT INTO inlog (username, password, role)
@@ -151,11 +143,10 @@ function register()
             $stmt->bindParam(':role', $role);
             $stmt->execute();
             echo "Gebruiker aangemaakt";
-            header('Refresh:2; url=index.php?page=inloggen');
             $conn = NULL;
         }
     } else {
-        include("registreren.html");
+        
     }
 }
 
@@ -169,7 +160,6 @@ function logout()
     } else {
         echo "er is een probleem met uitloggen";
     }
-    header('Refresh:2; url=index.php');
 }
 
 ?>

@@ -7,11 +7,9 @@
 
 <body>
     <header>
-        <?php
-        $conn = dBConnect(); ?>
         <div class="header">
 
-            <?php headerknoppen(); 
+            <?= headerknoppen(); 
             $section = login();?>
 
         </div>
@@ -27,8 +25,8 @@
         <input type="submit" name="inloggen" value="Inloggen" />
     </form>
     <p>- - -</p>
-    <p>Heeft u nog geen accout, dan kunt u zich hier registreren
-        <a href="http://localhost/lekkerlezen_tristan_bradley_vince/inlog/layoutRegistreren.php">registreren</a>
+    <p>Heeft u nog geen accout, dan kunt u zich hier
+        <a href="Registreren.php">registreren</a>
     </p>
 
     <footer>
