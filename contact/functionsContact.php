@@ -2,15 +2,15 @@
 
 function dBconnect(){
 
-    $servername = "localhost";
-    $username = "s151363_lekkerlezen";
-    $password = "lekkerlezen";
-    $dbname = "s151363_lekkerlezen";
-
     // $servername = "localhost";
-    // $username = "root";
-    // $password = "";
-    // $dbname = "lekkerlezen";
+    // $username = "s151363_lekkerlezen";
+    // $password = "lekkerlezen";
+    // $dbname = "s151363_lekkerlezen";
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "lekkerlezen";
     
   
     $conn = new PDO("mysql: host=$servername;dbname=$dbname", $username, $password);

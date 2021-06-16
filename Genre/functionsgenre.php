@@ -19,7 +19,7 @@ function dBconnect()
   }
 }
 
-function headerKnoppen()
+function headerknoppen()
 {
   $headerknop = "<img class='img1' src='../Foto/logo.png' alt='Lekker lezen logo'>";
   $headerknop .= "<a class='navigation' href='../index/index.php'>Homepage</a>";
@@ -38,7 +38,7 @@ function getBookByGenre()
     if (isset($_GET["genre"])) {
       $conn = dBConnect();
       $genre = $_GET["genre"];
-      $stmt = $conn->prepare("SELECT bookid, Naam, auteur, descriptie, genre, kaft FROM boek WHERE genre = :genre");
+      $stmt = $conn->prepare("SELECT id, Naam, auteur, descriptie, genre, kaft FROM boek WHERE genre = :genre");
       $stmt->setFetchMode(PDO::FETCH_ASSOC);
       $stmt->execute(array('genre' => $genre));
       $result = $stmt->fetchAll();
@@ -69,9 +69,9 @@ function showBookByGenre($books)
 
         </div>
         <div class="boekenbox">
-          <p><?php $id = $boek["bookid"];
+          <p><?php $id = $boek["id"];
               echo $boek["descriptie"] ?></p>
-          <p><?php echo "<a href='reviews.php?bookid=$id'>Link to reviews</a>"; ?></p>
+          <p><?php echo "<a href='reviews.php?id=$id'>Link to reviews</a>"; ?></p>
         </div>
       </div>
 <?php
