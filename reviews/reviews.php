@@ -22,6 +22,7 @@
       </div>
       <?php
       include_once("reviewsfunction.php");
+      include_once("../entire-site/siteFunctions.php");
   $boek = getBookByBookid();
   showBookByBookid($boek);
 

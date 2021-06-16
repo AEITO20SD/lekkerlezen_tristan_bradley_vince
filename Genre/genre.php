@@ -7,7 +7,10 @@
 </head>
 <body>
   <header>
-  <?php include_once("functionsgenre.php"); ?>
+  <?php 
+  include_once("../entire-site/siteFunctions.php");
+  include_once("functionsgenre.php"); 
+  ?>
     <div class="header">
       <?= headerknoppen(); ?> 
     </div>
@@ -51,7 +54,7 @@
   
   // dBConnect(); //
 
-  $books = getBookByGenre();
+  $books = getBookByGenre($conn);
   showBookByGenre($books);
   ?>
 </main>
