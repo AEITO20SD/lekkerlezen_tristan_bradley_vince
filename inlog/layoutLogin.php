@@ -25,8 +25,8 @@
         <input type="submit" name="inloggen" value="Inloggen" />
     </form>
     <p>- - -</p>
-    <p>Heeft u nog geen accout, dan kunt u zich hier
-        <a href="Registreren.php">registreren</a>
+    <p>Heeft u nog geen account, dan kunt u zich hier
+        <a href="registreren.php">registreren</a>
     </p>
 
     <footer>

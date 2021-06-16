@@ -8,12 +8,7 @@
 <body>
   <header>
     <div class="header">
-      <img class="img1" src="../Foto/logo.png" alt="Lekker lezen logo">
-      <button class="navigation" onclick="document.location='index/index.php'">Homepage</button>
-      <button class="navigation" onclick="document.location='genre.php'">Genre</button>
-      <button class="navigation" onclick="document.location='top10.php'">Top 10</button>
-      <button class="navigation" onclick="document.location='overons.html'">Over Ons</button>
-      <button class="navigation" onclick="document.location='contact.php'">Contact Pagina</button>
+      <?= headerknoppen(); ?> 
     </div>
   </header>
   <main>

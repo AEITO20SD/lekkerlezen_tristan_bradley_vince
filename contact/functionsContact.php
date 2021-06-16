@@ -3,9 +3,15 @@
 function dBconnect(){
 
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "lekkerlezen";
+    $username = "s151363_lekkerlezen";
+    $password = "lekkerlezen";
+    $dbname = "s151363_lekkerlezen";
+
+    // $servername = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $dbname = "lekkerlezen";
+    
   
     $conn = new PDO("mysql: host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -16,12 +22,12 @@ function dBconnect(){
 
 function headerKnoppen(){
     $headerknop = "<img class='img1' src='../Foto/logo.png' alt='Lekker lezen logo'>";
-    $headerknop .= "<a class='navigation' href='http://localhost/lekkerlezen_tristan_bradley_vince/index/'>Homepage</a>";
-    $headerknop .= "<a class='navigation' href='http://localhost/lekkerlezen_tristan_bradley_vince/Genre/LayoutGenre.php'>Genre</a>";
-    $headerknop .= "<a class='navigation' href='http://localhost/lekkerlezen_tristan_bradley_vince/top_10/layoutTop10.php'>Top 10</a>";
-    $headerknop .= "<a class='navigation' href='http://localhost/lekkerlezen_tristan_bradley_vince/over_ons/'>Over Ons</a>";
-    $headerknop .= "<a class='navigation' href='http://localhost/lekkerlezen_tristan_bradley_vince/contact/'>Contact pagina</a>";
-    $headerknop .= "<a class='navigation' href='http://localhost/lekkerlezen_tristan_bradley_vince/inlog/'>Inlog pagina</a>";
+    $headerknop .= "<a class='navigation' href='../index/index.php'>Homepage</a>";
+    $headerknop .= "<a class='navigation' href='../Genre/genre.php'>Genre</a>";
+    $headerknop .= "<a class='navigation' href='../top_10/top10.php'>Top 10</a>";
+    $headerknop .= "<a class='navigation' href='../over_ons/over_ons.php'>Over Ons</a>";
+    $headerknop .= "<a class='navigation' href='../contact/contact.php'>Contact pagina</a>";
+    $headerknop .= "<a class='navigation' href='../inlog/inlog.php'>Inloggen</a>";
 
     return $headerknop;
 }
