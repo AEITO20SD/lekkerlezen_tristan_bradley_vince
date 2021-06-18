@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="header">
-
+        <?= userCheck();?>
             <?= headerknoppen(); ?>
 
         </div>

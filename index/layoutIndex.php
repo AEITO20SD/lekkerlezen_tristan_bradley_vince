@@ -12,7 +12,8 @@
     <header>
         <div class="header">
 
-            <?= headerknoppen(); ?>
+            <?= headerKnoppen();?>
+            <?= userCheck();?>
         </div>
     </header>
 

@@ -15,6 +15,7 @@
             <?= headerknoppen(); ?>
 
         </div>
+        <?= userCheck();?>
     </header>
     
     <main>

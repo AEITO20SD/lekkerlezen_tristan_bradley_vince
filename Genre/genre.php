@@ -13,6 +13,7 @@
   ?>
     <div class="header">
       <?= headerknoppen(); ?> 
+      <?= userCheck();?>
     </div>
   </header>
   <main>

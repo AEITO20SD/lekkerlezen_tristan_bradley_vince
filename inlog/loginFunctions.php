@@ -32,8 +32,7 @@ function login()
             echo "Er is iets fout gegaan tijdens het inloggen";
             
         }
-    } else {
-        
+        header('Refresh:2; url=../index/index.php');
     }
 }
 
@@ -89,9 +88,7 @@ function checkUserPassword($username, $password)
 }
 
 
-function checkRole($role)
-{
-}
+
 
 function register()
 {
@@ -133,6 +130,7 @@ function logout()
     } else {
         echo "er is een probleem met uitloggen";
     }
+    header('Refresh:2; url=../index/index.php');
 }
 
 ?>

@@ -6,6 +6,7 @@
 
 <body>
     <header>
+    <?= userCheck();?>
         <?php
         $conn = dBConnect(); ?>
         <div class="header">

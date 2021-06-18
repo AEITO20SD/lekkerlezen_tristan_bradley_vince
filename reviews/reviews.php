@@ -15,6 +15,7 @@
       <button class="navigation" onclick="document.location='overons.html'">Over Ons</button>
       <button class="navigation" onclick="document.location='contact.php'">Contact Pagina</button>
     </div>
+    <?= userCheck();?>
   </header>
   <main>
       <div class="center">
