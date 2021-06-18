@@ -31,27 +31,27 @@
     <div class="genre"> </div>
   </div>
   <div class="container">
-    <div class="genre"> <a href="genre.php?genre=Biografie"> Biografie </a>
+    <div class="genre"> <a href="genreOphalen.php?genre=Biografie"> Biografie </a>
     </div>
-    <div class="genre"> <a href="genre.php?genre=Humor"> Humor </a>
-    </div>
-  </div>
-  <div class="container">
-    <div class="genre"> <a href="genre.php?genre=Literair"> Literaire essay </a>
-    </div>
-    <div class="genre"> <a href="genre.php?genre=Psychologisch"> Psychologisch verhaal </a>
+    <div class="genre"> <a href="genreOphalen.php?genre=Humor"> Humor </a>
     </div>
   </div>
   <div class="container">
-    <div class="genre"> <a href="genre.php?genre=Fictie"> Fictie </a>
+    <div class="genre"> <a href="genreOphalen.php?genre=Literair"> Literaire essay </a>
     </div>
-    <div class="genre"> <a href="genre.php?genre=Historisch"> Historisch verhaal </a>
+    <div class="genre"> <a href="genreOphalen.php?genre=Psychologisch"> Psychologisch verhaal </a>
     </div>
   </div>
   <div class="container">
-    <div class="genre"> <a href="genre.php?genre=Science Fiction"> Science Fiction </a>
+    <div class="genre"> <a href="genreOphalen.php?genre=Fictie"> Fictie </a>
     </div>
-    <div class="genre"> <a href="genre.php?genre=Thriller"> Thriller </a>
+    <div class="genre"> <a href="genreOphalen.php?genre=Historisch"> Historisch verhaal </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="genre"> <a href="genreOphalen.php?genre=Science Fiction"> Science Fiction </a>
+    </div>
+    <div class="genre"> <a href="genreOphalen.php?genre=Thriller"> Thriller </a>
     </div>
   </div>
 

@@ -15,14 +15,14 @@
             <?= headerKnoppen();?>
             
         </div>
-
+        <div class="welkom">
+    <?= userCheck();?>
+        </div>
         
     </header>
 
     <main>
-    <div class="welkom">
-    <?= userCheck();?>
-        </div>
+    
         <div class="welkom">
             <?= welkom(); ?>
         </div>
