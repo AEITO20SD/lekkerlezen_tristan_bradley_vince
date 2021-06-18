@@ -133,4 +133,12 @@ function logout()
     header('Refresh:2; url=../index/index.php');
 }
 
-?>
+
+
+function regi(){
+    
+    $regi = "Heeft u nog geen account, dan kunt u zich hier";
+    $regi .= " <a href='registreren.php'>registreren</a>";
+    
+    return $regi;
+}

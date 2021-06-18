@@ -13,7 +13,10 @@
   ?>
     <div class="header">
       <?= headerknoppen(); ?> 
-      <?= userCheck();?>
+      
+      <?php
+        $conn = dBConnect(); ?>
+        <?= userCheck();?>
     </div>
   </header>
   <main>

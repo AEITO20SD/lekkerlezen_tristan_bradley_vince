@@ -9,9 +9,9 @@
     <header>
         <div class="header">
         <?= userCheck();?>
-            <?php headerknoppen(); 
+            <?= headerknoppen(); ?>
     
-            $section = login();?>
+   <?php $section = login();?>
 
         </div>
     </header>
@@ -26,8 +26,7 @@
         <input type="submit" name="inloggen" value="Inloggen" />
     </form>
     <p>- - -</p>
-    <p>Heeft u nog geen account, dan kunt u zich hier
-        <a href="registreren.php">registreren</a>
+    <?= regi()?>
     </p>
 
     <footer>
