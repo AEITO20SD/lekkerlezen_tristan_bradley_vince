@@ -23,11 +23,35 @@ function dBConnect() {
     return  $conn;
 }
 
+if (!isset($_SESSION['login'])) {
+    $_SESSION['login'] = false;
+    $_SESSION['username'] = "";
+    $_SESSION['role'] = 0;
+}
+
+function userCheck(){
+    if($_SESSION['login']){
+        $username = $_SESSION['username'];
+        $role = $_SESSION['role'];
+        $header = " - Welkom: $username ($role)";
+    }
+    return $header;
+    }
+
+function checkRole($role)
+{
+    if($_SESSION['role']>= $role){
+        return true;
+    }else {
+        return false;
+    }
+}
+
 function headerKnoppen(){
     $headerknop = "<img class='img1' src='../Foto/logo.png' alt='Lekker lezen logo'>";
     $headerknop .= "<a class='navigation' href='../index/index.php'>Homepage</a>";
     if(checkRole(1)){
-    $headerknop .= "<a class='navigation' href='../Genre/genre.php'>Genre</a>";
+    $headerknop .= "<a class='navigation' href='../Genre/genreOphalen.php'>Genre</a>";
     }
     
     $headerknop .= "<a class='navigation' href='../top_10/top10.php'>Top 10</a>";
@@ -54,24 +78,9 @@ function contactbox(){
 
 
 
-function userCheck(){
-    if($_SESSION['login']){
-        $username = $_SESSION['username'];
-        $role = $_SESSION['role'];
-        $header = " - Welkom: $username ($role)";
-    }
-    return $header;
-    }
 
-    function checkRole($role)
-{
-    if($_SESSION['role']>= $role){
-        return true;
-    }else {
-        return false;
-    }
-}
 
+   
 
 
 

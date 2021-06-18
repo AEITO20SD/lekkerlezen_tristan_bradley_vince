@@ -11,10 +11,14 @@
 <body>
     <header>
         <div class="header">
-        <?= userCheck();?>
+        
             <?= headerknoppen(); ?>
-
+            </div>
+            <div class="welkom">
+    <?= userCheck();?>
+        
         </div>
+
     </header>
     <h2> over ons </h2>
   <div class="over0">

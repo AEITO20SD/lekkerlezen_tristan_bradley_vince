@@ -8,16 +8,19 @@
 <body>
   <header>
   <?php 
-  include_once("../entire-site/siteFunctions.php");
-  include_once("functionsgenre.php"); 
+
   ?>
     <div class="header">
       <?= headerknoppen(); ?> 
       
       <?php
         $conn = dBConnect(); ?>
-        <?= userCheck();?>
-    </div>
+        </div>
+        <div class="welkom">
+    <?= userCheck();?>
+        </div>
+    
+
   </header>
   <main>
   <div class="center">

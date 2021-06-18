@@ -8,11 +8,14 @@
 <body>
     <header>
         <div class="header">
-        <?= userCheck();?>
+        
             <?= headerknoppen(); ?>
     
    <?php $section = login();?>
 
+        </div>
+        <div class="welkom">
+    <?= userCheck();?>
         </div>
     </header>
 

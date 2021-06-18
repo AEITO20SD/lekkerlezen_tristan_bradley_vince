@@ -13,11 +13,16 @@
         <div class="header">
 
             <?= headerKnoppen();?>
-            <?= userCheck();?>
+            
         </div>
+
+        
     </header>
 
     <main>
+    <div class="welkom">
+    <?= userCheck();?>
+        </div>
         <div class="welkom">
             <?= welkom(); ?>
         </div>

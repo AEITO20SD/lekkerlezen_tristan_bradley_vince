@@ -356,3 +356,9 @@ text-align: center;
     border: 0px;
     color: white;
   }
+
+  .loginbox{
+    width: 100%;
+    background-color: #e8e4ba;
+    height: 10%;
+  }

@@ -1,6 +1,22 @@
 <?php
 
 
+
+
+function logout()
+{
+    $_SESSION['login'] = false;
+    $_SESSION['username'] = "";
+    $_SESSION['role'] = 0;
+    if (!($_SESSION['login'] == true)) {
+        echo "u bent uitgelogd";
+    } else {
+        echo "er is een probleem met uitloggen";
+    }
+    header('Refresh:2; url=../index/index.php');
+}
+
+
 function check_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -13,11 +29,7 @@ function check_input($data) {
 
 
 
-if (!isset($_SESSION['login'])) {
-    $_SESSION['login'] = false;
-    $_SESSION['username'] = "";
-    $_SESSION['role'] = 0;
-}
+
 
 
 function login()
@@ -120,18 +132,6 @@ function register()
     }
 }
 
-function logout()
-{
-    $_SESSION['login'] = false;
-    $_SESSION['username'] = "";
-    $_SESSION['role'] = 0;
-    if (!($_SESSION['login'] == true)) {
-        echo "u bent uitgelogd";
-    } else {
-        echo "er is een probleem met uitloggen";
-    }
-    header('Refresh:2; url=../index/index.php');
-}
 
 
 

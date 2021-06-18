@@ -6,7 +6,7 @@
 
 <body>
     <header>
-    <?= userCheck();?>
+    
         <?php
         $conn = dBConnect(); ?>
         <div class="header">
@@ -14,6 +14,9 @@
             <?= headerknoppen(); ?>
          <?php   $section = register();?>
 
+        </div>
+        <div class="welkom">
+    <?= userCheck();?>
         </div>
     </header>
 <h1>Registreren</h1>
