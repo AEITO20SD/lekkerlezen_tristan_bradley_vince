@@ -2,15 +2,15 @@
 
 function dBConnect() {
     
-    // $servername = "localhost";
-    // $username = "s151363_lekkerlezen";
-    // $password = "lekkerlezen";
-    // $dbname = "s151363_lekkerlezen";
-
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "lekkerlezen";
+    $username = "s151363_lekkerlezen";
+    $password = "lekkerlezen";
+    $dbname = "s151363_lekkerlezen";
+
+    // $servername = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $dbname = "lekkerlezen";
     
     $conn = new PDO("mysql: host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -60,9 +60,9 @@ function headerKnoppen(){
     $headerknop .= "<a class='navigation' href='../contact/contact.php'>Contact pagina</a>";
     
     $headerknop .= "<a class='navigation' href='../inlog/inlog.php'>Inloggen</a>";
-    
+        if(checkRole(1)){
         $headerknop .= "<a class='navigation' href='../inlog/uitlog.php'>Uitloggen</a>";
-    
+        }
     return $headerknop;
 }
 
