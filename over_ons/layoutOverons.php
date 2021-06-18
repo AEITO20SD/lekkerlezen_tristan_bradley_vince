@@ -20,6 +20,7 @@
         </div>
 
     </header>
+    <br>
     <h2> over ons </h2>
   <div class="over0">
 <div class="over">
