@@ -2,15 +2,15 @@
 
 function dBConnect() {
     
-    $servername = "localhost";
-    $username = "s151363_lekkerlezen";
-    $password = "lekkerlezen";
-    $dbname = "s151363_lekkerlezen";
-
     // $servername = "localhost";
-    // $username = "root";
-    // $password = "";
-    // $dbname = "lekkerlezen";
+    // $username = "s151363_lekkerlezen";
+    // $password = "lekkerlezen";
+    // $dbname = "s151363_lekkerlezen";
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "lekkerlezen";
     
     $conn = new PDO("mysql: host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -50,9 +50,9 @@ function checkRole($role)
 function headerKnoppen(){
     $headerknop = "<img class='img1' src='../Foto/logo.png' alt='Lekker lezen logo'>";
     $headerknop .= "<a class='navigation' href='../index/index.php'>Homepage</a>";
-    if(checkRole(1)){
+    
     $headerknop .= "<a class='navigation' href='../Genre/genreOphalen.php'>Genre</a>";
-    }
+    
     
     $headerknop .= "<a class='navigation' href='../top_10/top10.php'>Top 10</a>";
     
@@ -66,7 +66,14 @@ function headerKnoppen(){
     return $headerknop;
 }
 
+// function role(){
+//     if(checkRole(1)){
+//         $role ="<div class='welkom'>";
+//     $role .= "hoi";
+//     $role .= "</div>";
 
+//         return $role;
+// }
 
 
 
@@ -76,15 +83,3 @@ function contactbox(){
     return $footerbox;
 }
 
-
-
-
-
-   
-
-
-
-
-
-
-?>
