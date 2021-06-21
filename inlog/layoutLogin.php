@@ -14,9 +14,7 @@
    <?php $section = login();?>
 
         </div>
-        <div class="welkom">
-    <?= userCheck();?>
-        </div>
+        <?= role()?>
     </header>
 
     <h1>Inloggen</h1>

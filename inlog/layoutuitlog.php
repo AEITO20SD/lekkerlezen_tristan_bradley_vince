@@ -7,11 +7,12 @@
 <body>
     <header>
         <div class="header">
-        <?= userCheck();?>
+        
             <?= headerknoppen(); 
             $section = login();?>
 
         </div>
+        <?= role()?>
     </header>
 
 <main>

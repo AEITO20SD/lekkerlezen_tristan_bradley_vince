@@ -18,9 +18,7 @@
 
         </div>
         
-        <div class="welkom">
-    <?= userCheck();?>
-        </div>
+        <?= role()?>
     </header>
 
 

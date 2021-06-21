@@ -16,9 +16,7 @@
       <?php
         $conn = dBConnect(); ?>
         </div>
-        <div class="welkom">
-    <?= userCheck();?>
-        </div>
+        <?= role()?>
     
 
   </header>

@@ -15,9 +15,7 @@
          <?php   $section = register();?>
 
         </div>
-        <div class="welkom">
-    <?= userCheck();?>
-        </div>
+        <?= role()?>
     </header>
 <h1>Registreren</h1>
 <form method="post" action="">

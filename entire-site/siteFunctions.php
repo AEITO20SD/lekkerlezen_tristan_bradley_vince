@@ -66,14 +66,17 @@ function headerKnoppen(){
     return $headerknop;
 }
 
-// function role(){
-//     if(checkRole(1)){
-//         $role ="<div class='welkom'>";
-//     $role .= "hoi";
-//     $role .= "</div>";
+function role(){
+    if(checkRole(1)){
+    $rol =  "<div class='welkom'>";
+      $rol .=   userCheck();
+$rol .= "</div>";
+    }
+    return $rol;
+}
 
-//         return $role;
-// }
+
+
 
 
 
