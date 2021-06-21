@@ -46,10 +46,10 @@
       }
       else
       {
-        addReviewToBook($boek{'id'});
+        addReviewToBook($boek('id'));
       }
     }
-    $reviews = getReviewsByBookid($boek{'id'});
+    $reviews = getReviewsByBookid($boek('id'));
     showReviews($reviews);
 
   ?>

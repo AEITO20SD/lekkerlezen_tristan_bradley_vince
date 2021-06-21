@@ -4,13 +4,13 @@
 function getBookByBookid() {
 
     try {
-      if (isset($_GET["bookid"])) 
+      if (isset($_GET["id"])) 
       {
         $conn = dBConnect();
-        $bookid = $_GET["bookid"];
+        $id = $_GET["id"];
         $stmt = $conn->prepare("SELECT id, Naam, auteur, descriptie, genre, kaft FROM boek WHERE id = :id");
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
-        $stmt->execute(array('bookid' => $bookid));
+        $stmt->execute(array('id' => $id));
         $result = $stmt->fetch();
       
         return $result;
@@ -62,7 +62,7 @@ function getReviewsByBookid($bookid) {
       $conn = dBConnect();
       $stmt = $conn->prepare("SELECT id, Naam, bericht, bookid FROM reviews WHERE bookid = :bookid");
       $stmt->setFetchMode(PDO::FETCH_ASSOC);
-      $stmt->execute(array('bookid' => $bookid));
+      $stmt->execute(array('id' => $id));
       $result = $stmt->fetchAll();
     } catch(PDOException $e) {
       echo "<br>" . $e->getMessage();
