@@ -46,21 +46,21 @@
       }
       else
       {
-        addReviewToBook($boek('id'));
+        addReviewToBook($id);
       }
     }
-    $reviews = getReviewsByBookid($boek('id'));
+    $reviews = getReviewsByBookid($id);
     showReviews($reviews);
 
+
+
+    
   ?>
 </main>
   <footer>
+  
     <div class="contactbox">
-      <h3>Contact:</h3>
-      <p>Tel: 06060606<br>
-        E-mail: Lekkerlezen@lezen.nl<br>
-        Adres: Lezenstraat 7
-      </p>
+    <?= contactbox(); ?>
     </div>
   </footer>
 </body>
