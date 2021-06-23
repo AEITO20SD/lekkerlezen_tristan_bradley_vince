@@ -43,7 +43,7 @@ function showBookByBookid($boek) {
 function getReviewsByBookid($id) {
   try {
       $conn = dBConnect();
-      $stmt = $conn->prepare("SELECT id, Naam, bericht, bookid FROM reviews WHERE id = :id");
+      $stmt = $conn->prepare("SELECT id, Naam, bericht, bookid FROM reviews WHERE bookid = :id");
       $stmt->setFetchMode(PDO::FETCH_ASSOC);
       $stmt->execute(array('id' => $id));
       $result = $stmt->fetchAll();
@@ -67,12 +67,15 @@ function addReviewToBook($id) {
         $sql = "INSERT INTO reviews (Naam, bericht, bookid)
         VALUES ('$naam', '$bericht', '$id')";
         $conn->exec($sql);
+        
         echo "Dank u voor uw review.";
       } catch(PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
       }
+      $conn = null;
+        
 
-        $conn = null;
+        
     
 }
 

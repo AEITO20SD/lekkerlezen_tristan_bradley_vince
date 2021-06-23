@@ -38,6 +38,7 @@
   </form>
 
   <?php
+  $id = $_GET['id'];
     if (isset($_POST['submit']))
     {
       if (empty($_POST["naam"]) or empty($_POST["bericht"]))
@@ -46,7 +47,8 @@
       }
       else
       {
-        addReviewToBook($id);
+        
+      addReviewToBook($id);
       }
     }
     $reviews = getReviewsByBookid($id);

@@ -59,9 +59,12 @@ function headerKnoppen(){
     $headerknop .= "<a class='navigation' href='../over_ons/over_ons.php'>Over Ons</a>";
     $headerknop .= "<a class='navigation' href='../contact/contact.php'>Contact pagina</a>";
     
-    $headerknop .= "<a class='navigation' href='../inlog/inlog.php'>Inloggen</a>";
+   
         if(checkRole(1)){
         $headerknop .= "<a class='navigation' href='../inlog/uitlog.php'>Uitloggen</a>";
+        }
+        else{
+            $headerknop .= "<a class='navigation' href='../inlog/inlog.php'>Inloggen</a>";
         }
     return $headerknop;
 }
@@ -69,7 +72,7 @@ function headerKnoppen(){
 function role(){
     if(checkRole(1)){
     $rol =  "<div class='welkom'>";
-      $rol .=   userCheck();
+      $rol .=  userCheck();
 $rol .= "</div>";
     }
     return $rol;
