@@ -1,6 +1,6 @@
 <?php
 
-
+// Hij zoekt in de database naar een boek dat een bepaalde ID heeft gekregen
 function getBookByBookid() {
 
     try {
