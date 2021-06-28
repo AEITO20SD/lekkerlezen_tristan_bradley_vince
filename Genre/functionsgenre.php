@@ -42,7 +42,7 @@ function showBookByGenre($books)
         <div class="boekenbox">
           <p><?php $id = $boek["id"];
               echo $boek["descriptie"] ?></p>
-          <p><?php echo "<a href='reviews.php?id=$id'>Link to reviews</a>"; ?></p>
+          <p><?php echo "<a href='reviewsOphalen.php?id=$id'>Link to reviews</a>"; ?></p>
         </div>
       </div>
 <?php

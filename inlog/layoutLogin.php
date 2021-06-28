@@ -8,12 +8,13 @@
 <body>
     <header>
         <div class="header">
-        <?= userCheck();?>
+        
             <?= headerknoppen(); ?>
     
    <?php $section = login();?>
 
         </div>
+        <?= role()?>
     </header>
 
     <h1>Inloggen</h1>

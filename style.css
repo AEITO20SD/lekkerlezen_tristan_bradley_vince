@@ -28,7 +28,7 @@ body {
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
-    padding: 20px;
+    padding: 28px;
   }
   p {
     margin: 10px;
@@ -355,4 +355,10 @@ text-align: center;
     background-color: lightseagreen;
     border: 0px;
     color: white;
+  }
+
+  .loginbox{
+    width: 100%;
+    background-color: #e8e4ba;
+    height: 10%;
   }

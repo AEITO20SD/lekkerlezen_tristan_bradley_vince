@@ -6,7 +6,7 @@
 
 <body>
     <header>
-    <?= userCheck();?>
+    
         <?php
         $conn = dBConnect(); ?>
         <div class="header">
@@ -15,6 +15,7 @@
          <?php   $section = register();?>
 
         </div>
+        <?= role()?>
     </header>
 <h1>Registreren</h1>
 <form method="post" action="">
